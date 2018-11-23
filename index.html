@@ -162,12 +162,26 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/08.obj', null,
+      './assets/05.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 03'
         loadingElement.innerHTML = ''
     })
   })
+
+  var sample3Button = document.getElementById('sample-4-button')
+  sample3Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/08.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 04'
+        loadingElement.innerHTML = ''
+    })
+  })
+
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.js"></script>
