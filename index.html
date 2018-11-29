@@ -60,7 +60,7 @@
   <body>
   <div class="content">
 
-    <header class="center"><h1>Javascript 3D Model Viewer</h1></header>
+    <header class="center"><h1>Carotid Model Viewer</h1></header>
 
     <div id="viewer" style="">
     </div>
@@ -80,6 +80,15 @@
       <button class="button" id="sample-3-button">
         Sample 3
       </button>
+      <button class="button" id="sample-4-button">
+        Sample 4
+      </button>
+      <button class="button" id="sample-5-button">
+        Sample 5
+      </button>
+      <button class="button" id="sample-6-button">
+        Sample 6
+      </button>
     </div>
 
     <div class="center">
@@ -92,7 +101,7 @@
       <pre><code class="language-javascript">var modelPlayer = this['js-3d-model-viewer'];
 var viewerElement = document.getElementById('viewer')
 var scene = modelPlayer.prepareScene(viewerElement)
-modelPlayer.loadObject(scene, './assets/sample.obj')
+modelPlayer.loadObject(scene, './assets/01.obj')
 
 var fullScreenButton = document.getElementById('fullscreen-button')
 fullScreenButton.addEventListener('click', function () {
@@ -101,7 +110,7 @@ fullScreenButton.addEventListener('click', function () {
     </div>
 
     <footer class="center footer">
-      <a href="https://github.com/cgwire/js-3d-model-viewer">
+      <a href="https://github.com/MargaridaMC/carotidModelViewer">
         See sources on Github
       </a>
     </footer>
@@ -170,7 +179,7 @@ fullScreenButton.addEventListener('click', function () {
   })
 
   var sample4Button = document.getElementById('sample-4-button')
-  sample3Button.addEventListener('click', function () {
+  sample4Button.addEventListener('click', function () {
     modelPlayer.clearScene(scene)
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
@@ -181,7 +190,32 @@ fullScreenButton.addEventListener('click', function () {
         loadingElement.innerHTML = ''
     })
   })
-
+  
+  var sample5Button = document.getElementById('sample-5-button')
+  sample5Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/12.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 05'
+        loadingElement.innerHTML = ''
+    })
+  })
+  
+  var sample6Button = document.getElementById('sample-6-button')
+  sample6Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/08.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 06'
+        loadingElement.innerHTML = ''
+    })
+  })
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.js"></script>
