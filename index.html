@@ -89,6 +89,15 @@
       <button class="button" id="sample-6-button">
         Sample 6
       </button>
+      <button class="button" id="sample-7-button">
+        Sample 7
+      </button>
+      <button class="button" id="sample-8-button">
+        Sample 8
+      </button>
+      <button class="button" id="sample-9-button">
+        Sample 9
+      </button>
     </div>
 
     <div class="center">
@@ -117,6 +126,7 @@ fullScreenButton.addEventListener('click', function () {
   </div>
 
   <script src="./dist/js-3d-model-viewer.js"></script>
+  <script src="./src/STLLoader.js"
   <script>
   var modelPlayer = this['js-3d-model-viewer']
   var nameElement = document.getElementById('name')
@@ -132,7 +142,7 @@ fullScreenButton.addEventListener('click', function () {
     loadingElement.innerHTML = progress + '%'
   })
 
-  modelPlayer.loadObject(scene, './assets/01.obj', null, function () {
+  modelPlayer.loadObject(scene, './assets/04.stl', null, function () {
     nameElement.innerHTML = 'Sample 01'
     loadingElement.innerHTML = ''
   })
@@ -171,7 +181,7 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/05.obj', null,
+      './assets/03.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 03'
         loadingElement.innerHTML = ''
@@ -184,7 +194,7 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/08.obj', null,
+      './assets/05.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 04'
         loadingElement.innerHTML = ''
@@ -197,7 +207,7 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/12.obj', null,
+      './assets/08.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 05'
         loadingElement.innerHTML = ''
@@ -210,9 +220,48 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/10.obj', null,
+      './assets/09.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 06'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample7Button = document.getElementById('sample-7-button')
+  sample7Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/10.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 07'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample8Button = document.getElementById('sample-8-button')
+  sample8Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/11.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 08'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample9Button = document.getElementById('sample-9-button')
+  sample9Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/12.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 09'
         loadingElement.innerHTML = ''
     })
   })
