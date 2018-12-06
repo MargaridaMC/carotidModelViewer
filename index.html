@@ -98,6 +98,15 @@
       <button class="button" id="sample-9-button">
         Sample 9
       </button>
+      <button class="button" id="sample-10-button">
+        Sample 10
+      </button>
+      <button class="button" id="sample-11-button">
+        Sample 11
+      </button>
+      <button class="button" id="sample-12-button">
+        Sample 12
+      </button>
     </div>
 
     <div class="center">
@@ -193,7 +202,7 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/05.obj', null,
+      './assets/04.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 04'
         loadingElement.innerHTML = ''
@@ -206,7 +215,7 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/08.obj', null,
+      './assets/05.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 05'
         loadingElement.innerHTML = ''
@@ -219,7 +228,7 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/09.obj', null,
+      './assets/06.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 06'
         loadingElement.innerHTML = ''
@@ -232,7 +241,7 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/10.obj', null,
+      './assets/07.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 07'
         loadingElement.innerHTML = ''
@@ -245,7 +254,7 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/11.obj', null,
+      './assets/08.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 08'
         loadingElement.innerHTML = ''
@@ -258,9 +267,48 @@ fullScreenButton.addEventListener('click', function () {
     modelPlayer.resetCamera(scene)
     modelPlayer.loadObject(
       scene, 
-      './assets/02.obj', null,
+      './assets/09.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 09'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample10Button = document.getElementById('sample-10-button')
+  sample10Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/10.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 10'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample11Button = document.getElementById('sample-11-button')
+  sample11Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/11.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 11'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample12Button = document.getElementById('sample-12-button')
+  sample12Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/12.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 12'
         loadingElement.innerHTML = ''
     })
   })
