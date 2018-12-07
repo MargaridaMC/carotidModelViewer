@@ -116,6 +116,21 @@
       <button class="button" id="sample-15-button">
         Sample 15
       </button>
+      <button class="button" id="sample-16-button">
+        Sample 16
+      </button>
+      <button class="button" id="sample-17-button">
+        Sample 17
+      </button>
+      <button class="button" id="sample-18-button">
+        Sample 18
+      </button>
+      <button class="button" id="sample-19-button">
+        Sample 19
+      </button>
+      <button class="button" id="sample-20-button">
+        Sample 20
+      </button>
     </div>
 
     <div class="center">
@@ -357,6 +372,71 @@ fullScreenButton.addEventListener('click', function () {
       './assets/15.obj', null,
       function () {
         nameElement.innerHTML = 'Sample 15'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample16Button = document.getElementById('sample-16-button')
+  sample16Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/16.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 16'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample17Button = document.getElementById('sample-17-button')
+  sample17Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/17.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 17'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample18Button = document.getElementById('sample-18-button')
+  sample18Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/18.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 18'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample19Button = document.getElementById('sample-19-button')
+  sample19Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/19.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 19'
+        loadingElement.innerHTML = ''
+    })
+  })
+
+  var sample20Button = document.getElementById('sample-20-button')
+  sample20Button.addEventListener('click', function () {
+    modelPlayer.clearScene(scene)
+    modelPlayer.resetCamera(scene)
+    modelPlayer.loadObject(
+      scene, 
+      './assets/20.obj', null,
+      function () {
+        nameElement.innerHTML = 'Sample 20'
         loadingElement.innerHTML = ''
     })
   })
