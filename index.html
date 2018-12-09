@@ -132,7 +132,7 @@
 
 	<div class="tab">
 		<script>
-	        for (var i = 1; i <= 30; i++) {
+	        for (var i = 1; i <= 40; i++) {
 			    document.write('<button class="tablinks" onclick="loadModel(' + i + ')">Sample ' + i + '</button>');
 			}
 		</script>
@@ -198,7 +198,7 @@ fullScreenButton.addEventListener('click', function () {
   var loadingElement = document.getElementById('loading')
   var viewerElement = document.getElementById('viewer')
   var scene = modelPlayer.prepareScene(viewerElement)
-  var numModels = 30
+  var numModels = 40
   var currentModel = 1
 
   function loadModel(sampleNum){
