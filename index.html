@@ -120,40 +120,21 @@
     <div id="viewer" style="">
     </div>
 
-    <!--
-    <div class="navbar">
-    	
-    	<header style="color:white; padding-top:25px;padding-left:20px;"><b>Samples</b></header>
-
-    	<li style="color: #3CB371;padding-left:20px;">Sample 01</li>
-
+    <!-- Left hand side navigation pane. This is for a total of 60 models --->
+    <div class="tab">
+	<script>
+	       for (var i = 1; i <= 60; i++) {
+			   document.write('<button class="tablinks" onclick="loadModel(' + i + ')">Sample ' + i + '</button>');
+		}
+	</script>
     </div>
--->
 
-	<div class="tab">
-		<script>
-	        for (var i = 1; i <= 60; i++) {
-			    document.write('<button class="tablinks" onclick="loadModel(' + i + ')">Sample ' + i + '</button>');
-			}
-		</script>
-	</div>
-
+    <!--- Initial page --->	  
     <div class="center">
       <span id="name">Sample 1</span>
       <span id="loading"></span>
     </div>
-<!--
-    <div class="sampleButton">
 
-    	<script>
-	        for (var i = 1; i <= 25; i++) {
-			    document.write('<button class="button" id="sample-' + i + '-button">Sample ' + i + '</button>');
-			}
-		</script>
-
-
-    </div>
--->
     <div class="center">
       <button class="button" id="fullscreen-button">
         Go Full Screen
@@ -171,19 +152,7 @@
     		<span>&#60;</span> 
     	</button>
     </div>
-<!---
-    <div style="margin: 2em auto; max-width: 900px">
-      <pre><code class="language-javascript">var modelPlayer = this['js-3d-model-viewer'];
-var viewerElement = document.getElementById('viewer')
-var scene = modelPlayer.prepareScene(viewerElement)
-modelPlayer.loadObject(scene, './assets/01.obj')
 
-var fullScreenButton = document.getElementById('fullscreen-button')
-fullScreenButton.addEventListener('click', function () {
-  modelPlayer.goFullScreen(viewerElement)
-})</code></pre>
-    </div>
---->
     <footer class="center footer">
       <a href="https://github.com/MargaridaMC/carotidModelViewer">
         See sources on Github
@@ -197,8 +166,13 @@ fullScreenButton.addEventListener('click', function () {
   var nameElement = document.getElementById('name')
   var loadingElement = document.getElementById('loading')
   var viewerElement = document.getElementById('viewer')
+  var fullScreenButton = document.getElementById('fullscreen-button')
+  var rightArrowButton = document.getElementById('rightarrow-button')
+  var leftArrowButton = document.getElementById('leftarrow-button')
   var scene = modelPlayer.prepareScene(viewerElement)
+  // Total number of models to display
   var numModels = 60
+  // Model that is currently on display
   var currentModel = 1
 
   function loadModel(sampleNum){
@@ -231,20 +205,10 @@ fullScreenButton.addEventListener('click', function () {
     loadingElement.innerHTML = ''
   })
 
-  var fullScreenButton = document.getElementById('fullscreen-button')
   fullScreenButton.addEventListener('click', function () {
     modelPlayer.goFullScreen(viewerElement)
   })
 
-/*
-  for (var i = 1; i <= numModels; i++){
-  	eval("var sample" + i + "Button = document.getElementById('sample-"+ i +"-button')")
-  	eval(`sample` + i + `Button.addEventListener('click', function () {
-    loadModel(` + i + `)
-  })`)
-  }*/
-  
-  var rightArrowButton = document.getElementById('rightarrow-button')
   rightArrowButton.addEventListener('click', function(){
 
   	if(currentModel == numModels) currentModel = numModels
@@ -252,8 +216,7 @@ fullScreenButton.addEventListener('click', function () {
   	loadModel(currentModel)
 
   })
-
-  var leftArrowButton = document.getElementById('leftarrow-button')
+	  
   leftArrowButton.addEventListener('click', function(){
 
   	if(currentModel == 1) currentModel = 1
